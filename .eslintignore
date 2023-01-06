@@ -1,0 +1,7 @@
+!.env.js
+node_modules/*
+package-lock.json
+allure
+_results_
+allure_report
+allure_results
