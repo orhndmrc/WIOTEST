@@ -1,5 +1,6 @@
 
 const assert = require('assert')
+import testData from '../data/testdata'
 
 export default class Page {
   constructor () {
@@ -8,6 +9,7 @@ export default class Page {
   }
 
   async open (path) {
+    console.log(testData.endpoint)
     await browser.url(path)
     await browser.pause(2000)
     assert.strictEqual(await browser.getTitle(), this.title)
