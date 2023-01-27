@@ -29,8 +29,8 @@ jobs:
         with:
           node-version: '16'
 
-#       - name : Install the dependencies
-#         run : npm install --legacy-peer-deps
+      - name : Install the dependencies
+        run : npm install --legacy-peer-deps
         
 #       - name : Change the selenoid port
 #         run : docker system prune --volumes
@@ -45,12 +45,12 @@ jobs:
            endpoint: ${{secrets.ENDPOINT}}
         run: 'echo "$userName"'
 
-#       - name : Run wdio test scripts
-#         env:
-#            userName: ${{secrets.USERNAME}}
-#            password: ${{secrets.PASSWORD}}
-#            endpoint: ${{secrets.ENDPOINT}}
-#         run : npx wdio
+      - name : Run wdio test scripts
+        env:
+           userName: ${{secrets.USERNAME}}
+           password: ${{secrets.PASSWORD}}
+           endpoint: ${{secrets.ENDPOINT}}
+        run : npx wdio
 
 #       - name: Get allure history
 #         uses: actions/checkout@v2
