@@ -18,7 +18,8 @@ describe('Login', () => {
     await LoginPage.open(testData.endpoint)
     console.log(await browser.getTitle())
     console.log(testData.userName)
-    console.log(typeof(testData.password))
+    console.log(testData.password)
+     console.log(testData.endpoint)
     
     await LoginPage.submit.waitForDisplayed()
     await LoginPage.submit.click()
