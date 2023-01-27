@@ -17,6 +17,7 @@ describe('Login', () => {
   it((count++) + '. should login with valid credentials - C1', async () => {
     await LoginPage.open(testData.endpoint)
     console.log(await browser.getTitle())
+    await LoginPage.submit.waitForDisplayed()
     await LoginPage.submit.click()
     await LoginPage.userNameBox.waitForDisplayed()
     await LoginPage.userNameBox.setValue(testData.userName)
