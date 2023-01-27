@@ -40,6 +40,10 @@ jobs:
 #         run : make build-clean
 
       - name : Run wdio test scripts
+        env:
+           userName: ${{secrets.USERNAME}}
+           password: ${{secrets.PASSWORD}}
+           endpoint: ${{secrets.ENDPOINT}}
         run : npx wdio
 
 #       - name: Get allure history
