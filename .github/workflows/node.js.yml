@@ -38,13 +38,19 @@ jobs:
         
 #       - name : build webdriverio-test docker image
 #         run : make build-clean
-
-      - name : Run wdio test scripts
+      - name: Print variables
         env:
            userName: ${{secrets.USERNAME}}
            password: ${{secrets.PASSWORD}}
            endpoint: ${{secrets.ENDPOINT}}
-        run : npx wdio
+        run: echo ${{secrets.USERNAME}} | echo ${endpoint}
+
+#       - name : Run wdio test scripts
+#         env:
+#            userName: ${{secrets.USERNAME}}
+#            password: ${{secrets.PASSWORD}}
+#            endpoint: ${{secrets.ENDPOINT}}
+#         run : npx wdio
 
 #       - name: Get allure history
 #         uses: actions/checkout@v2
