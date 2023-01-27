@@ -43,7 +43,7 @@ jobs:
            userName: ${{secrets.USERNAME}}
            password: ${{secrets.PASSWORD}}
            endpoint: ${{secrets.ENDPOINT}}
-        run: 'echo "$username"'
+        run: 'echo "$userName"'
 
 #       - name : Run wdio test scripts
 #         env:
